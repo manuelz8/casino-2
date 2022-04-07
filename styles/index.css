@@ -1,0 +1,574 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0%;
+    background-color: #3c529980;
+    color: white;
+    background-image: url(../assets/casino-background.svg);
+    background-size: cover;
+    background-position: 30%;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/*HEADER*/
+h1{
+    font-size: 34px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.header-section {
+    width: 100%;
+    box-sizing: border-box;
+    top: 0;
+    padding: 0 20px;
+}
+
+.latest-update span{
+    color: #FCD139;
+}
+
+.header-section-container {
+    max-width: 984px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0 auto;
+    background-color: #0e0202db;
+    padding: 0 20px;
+    border-radius: 0 0 10px 10px;
+}
+
+.header-section-logo {
+    width: 200px;
+    margin: 20px 0;
+}
+
+.header-section-logo img{
+    width: 100%;
+}
+
+.header-section-title {
+    margin: 0 auto;
+}
+
+.introduction-text {
+    text-align: center;
+}
+
+/*Bet table*/
+.bet-table{
+    max-width: 1024px;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 0 20px;
+    
+}
+
+.bet-table__bar{
+    background-color: #1D1D1D;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.sites, .play{
+    width: 25%;
+    text-align: center;
+}
+
+.bonus{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.rating{
+    width: 40%;
+    text-align: center;
+}
+
+/*Game Cards*/
+
+.game-card{
+    background-color: #1D1D1D;
+    border-radius: 10px;
+    width: 100%;
+    height: 150px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: ease 0.3s;
+}
+
+.game-card:hover{
+    transform: scale(1.05);
+}
+
+
+.game-card:first-child{
+    margin-top: 0;
+}
+
+.game-container{
+    width: 25%;
+    background-color: #2B1234;
+    height: 100%;
+    display: flex;
+    position: relative;
+    border-radius: 10px 0 0 10px;
+}
+
+.game-image{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.game-image img{
+    width: 80%;
+}
+
+.game-triangle{
+    width: 0;
+    height: 100%;
+    border-top: 75px solid transparent;
+    border-bottom: 75px solid transparent;
+    border-left: 13px solid #eee;
+    float: left;
+    position: absolute;
+    right: -13px;
+    border-left: 13px solid #2B1234;
+    position: absolute;
+
+}
+
+.second{
+    background-color: #DDD1D1;
+}
+
+#second{
+    border-left: 13px solid #DDD1D1;
+}
+
+.third{
+    background-color: black;
+}
+
+#third{
+    border-left: 13px solid black;
+}
+
+.fourth{
+    background-color: black;
+}
+
+#fourth{
+    border-left: 13px solid black;
+}
+
+.game-container-2{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.game-info{
+    width: 100%;
+    display: flex;
+    height: 120px;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-info h3{
+    color: forestgreen;
+}
+.game-disclaimer{
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 12px;
+    color: #999999;
+}
+
+.bonus h3{
+    margin: 5px 0;
+}
+
+.bonus p{
+    margin: 0;
+}
+
+.rating{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.rating img{
+    width: 150px;
+}
+
+.play a{
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: #FCD139 solid 2px;
+    border-radius: 5px;
+    transition: ease-in-out .3s;
+    cursor: pointer;
+}
+
+.play a:hover{
+    background-color: #FCD139;
+    color: black;
+    transform: scale(1.5);
+}
+
+@media screen and (max-width:600px){
+    
+    .bet-table{
+        display: none;
+    }
+}
+
+/*BET TABLE FOR MOBILE*/    
+.bet-table-mobile{
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.game-container-mobile{
+    display: flex;
+    width: 50%;
+    background-color: #161515;
+    height: 100%;
+    position: relative;
+    border-radius: 10px 0 0 10px;
+}
+
+.game-image-mobile, .game-image-mobile img{
+    max-height: 100px;
+    max-width: 100%;
+}
+
+.game-image-mobile{
+    width: 100%;
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.game-mobile-rating{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+
+.game-mobile-rating h2{
+    margin: 0;
+}
+
+.game-mobile-rating p{
+    margin: 0;
+    font-size: 12px;
+    color: #999999;
+}
+
+.game-container-mobile-2{
+    width: 50%;
+}
+
+.mobile-game-triangle{
+width: 0;
+    height: 100%;
+    border-top: 75px solid transparent;
+    border-bottom: 75px solid transparent;
+    border-left: 13px solid #eee;
+    float: left;
+    position: absolute;
+    right: -13px;
+    border-left: 13px solid #161515;
+    position: absolute;
+}
+@media screen and (max-width:600px){
+    
+    .game-info{
+        flex-direction: column;
+        height: 150px;
+        position: relative;
+        justify-content: flex-start;
+    }
+
+    .game-disclaimer{
+        display: none;
+    }
+
+    .bonus{
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .play{
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+    }
+
+    .play a{
+        padding: 10px 30px;
+    }
+
+}
+@media screen and (min-width:600px){
+    
+    .bet-table-mobile{
+        display: none;
+    }
+}
+
+/*DETAILED TEXT*/
+
+.detailed-text{
+    max-width: 1024px;
+    margin: 20px auto 0;
+    padding: 0 20px;
+}
+
+
+.detailed-text-container{
+    width: 100%;
+    background-color: #0e0202db;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.detailed-text h3{
+    text-align: center;
+}
+
+/*Footer*/
+
+.footer{
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-bottom: 0;
+}
+
+.footer-container{
+    width: 100%;
+    background-color: #0e0202db;
+    border-radius: 0 0;
+    padding: 0 20px;
+}
+
+.footer-logos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.footer-logos img{
+    width: 30%;
+    margin-top: 10px;
+}
+.footer-menu{
+    width: 100%;
+    padding: 20px 0;
+}
+
+.footer-menu ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    font-size: 16px;
+}
+
+.footer-menu a{
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    transition: ease 0.3s;
+    text-transform: capitalize;
+}
+
+.footer-menu li input{
+    display: none;
+}
+
+.footer-menu li label{
+    text-transform: none;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: ease 0.3s;
+}
+/*Pop up*/
+
+.pop-up{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0000009c;
+    transition: all 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10;
+}
+
+.close-label{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.pop-up__container{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #1D1D1D;
+    box-shadow: 1px 7px 25px rgba(0,0,0,0.6);
+    transition: ease 0.5s;
+    padding: 20px;
+    border-radius: 30px;
+    margin: 40px;
+}
+.pop-up__container h1{
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.pop-up__container p{
+    font-size: 14px;
+    text-align: center;
+}
+.pop-up__container input:not(:last-child){
+    border: none;
+    background-color: #393939;
+    border-radius: 5px;
+    outline: none;
+    color: white;
+    padding: 10px 5px;
+}
+
+.form-label{
+    margin: 10px 0
+}
+
+.pop-up__container header{
+    display: flex;
+    width: 100%;
+}
+
+
+/*Footer Modals*/
+.close-button{
+    border: #FCD139 solid 2px;
+    border-radius: 5px;
+    transition: ease 0.5s;
+    padding: 10px 30px;
+    cursor: pointer;
+    font-weight: 700;
+    text-align: center;
+}
+
+.close-button:hover{
+    transform: scale(1.1);
+}
+
+.footer-menu li label .close-button:hover{
+    background-color: #FCD139;
+    transform: scale(1.1);
+    color: black;
+}
+#contact:checked ~ .pop-up{
+    opacity: 1;
+    visibility: visible;
+}
+
+#privacy:checked ~ .pop-up{
+    opacity: 1;
+    visibility: visible;
+}
+#terms:checked ~ .pop-up{
+    opacity: 1;
+    visibility: visible;
+}
+
+.pop-up__container form input{
+    display: block;
+}
+
+.pop-up__container form{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+#modal-button{
+    border: #FCD139 solid 2px;
+    border-radius: 5px;
+    transition: ease 0.3s;
+    padding: 10px 30px;
+    cursor: pointer;
+    color: white;
+    background: none;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#modal-button:hover{
+    background-color: #FCD139;
+    transform: scale(1.1);
+    color: black;
+}
+
+textarea{
+    resize: none;
+    outline: none;
+    margin-bottom: 10px;
+    background-color: #393939;
+    border: none;
+    padding: 20px;
+    color: white;
+}
