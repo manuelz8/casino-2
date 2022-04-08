@@ -416,6 +416,14 @@ h1{
         display: flex;
     }
 
+#game-disclaimer-2{
+    display: none;
+}
+
+#game-disclaimer-2:checked ~ .game-disclaimer{
+        display: flex;
+    }
+
 @media screen and (max-width:850px){
     
     .game-info{
@@ -447,10 +455,21 @@ h1{
     .game-card{
         min-height: 200px;
     }
+
 }
 @media screen and (min-width:850px){
     
     .bet-table-mobile{
+        display: none;
+    }
+    .game-disclaimer{
+        position: initial;
+        display: flex;
+        background: none;
+        border-radius: none;
+        border: none;
+    }
+    .game-disclaimer a{
         display: none;
     }
 }
