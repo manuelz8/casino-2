@@ -6,7 +6,8 @@ body {
     margin: 0%;
     background-color: #3c529980;
     color: white;
-    background-image: url(../assets/casino-background.svg);
+    background-color: black;
+    background-image: url(../assets/background.svg);
     background-size: cover;
     background-position: 30%;
     background-attachment: fixed;
@@ -15,9 +16,14 @@ body {
 
 /*HEADER*/
 h1{
-    font-size: 34px;
+    font-size: 24px;
     margin-bottom: 0;
     text-align: center;
+}
+
+
+.header-section-container h3{
+    font-size: 18px;
 }
 
 .header-section {
@@ -37,7 +43,7 @@ h1{
     flex-direction: column;
     align-items: center;
     margin:0 auto;
-    background-color: #0e0202db;
+    background-color: #0e020263;
     padding: 0 20px;
     border-radius: 0 0 10px 10px;
 }
@@ -70,7 +76,7 @@ h1{
 
 .bet-table__bar{
     background-color: #1D1D1D;
-    padding: 10px 20px;
+    padding: 10px 0;
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -79,13 +85,9 @@ h1{
     font-weight: bold;
 }
 
-.sites, .play{
-    width: 25%;
-    text-align: center;
-}
 
-.bonus{
-    width: 35%;
+.bonus,.play{
+    width: 25%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -94,7 +96,12 @@ h1{
 
 
 .rating{
-    width: 40%;
+    width: 50%;
+    text-align: center;
+}
+
+.bar-element{
+    width: 20%;
     text-align: center;
 }
 
@@ -105,21 +112,80 @@ h1{
     border-radius: 10px;
     width: 100%;
     height: 150px;
-    margin: 10px 0;
+    margin: 20px 0;
     display: flex;
     align-items: center;
     cursor: pointer;
     transition: ease 0.3s;
+    box-shadow: 0 2px 10px 0 rgb(135 134 134 / 36%), 0 4px 22px 0 rgb(135 134 134 / 14%);
 }
 
 .game-card:hover{
     transform: scale(1.05);
 }
 
-
-.game-card:first-child{
-    margin-top: 0;
+.ribbon-container {
+    position: absolute;
+    top: -5px;
+    left: -10px;
+    overflow: visible;
+    font-size: 13px;
+    line-height: 14px;
+    z-index: 6;
+    text-align: left;
+    background: #f33;
 }
+
+.ribbon-container::before{
+    content: "";
+    height: 0;
+    width: 0;
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 0;
+}
+
+.ribbon-container span{
+    display: block;
+    padding: 2px 8px 3px 10px;
+    position: relative;
+    background: #f33;
+    overflow: visible;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.ribbon-container span:before{
+    content: "";
+    height: 0;
+    width: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -8px;
+    border-color: #f33 transparent;
+    border-style: solid;
+    border-width: 10px 8px 9px 0;
+    border-top: 10px solid #f33;
+    border-bottom: 9px solid #f33;
+}
+
+.ribbon-container span::after{
+    bottom: -7px;
+    left: 0;
+    border-top: 7px solid #990509;
+    border-left: 10px solid transparent;
+    content: "";
+    height: 0;
+    width: 0;
+    display: block;
+    position: absolute;
+}
+
+
 
 .game-container{
     width: 25%;
@@ -134,7 +200,6 @@ h1{
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
     
 }
@@ -143,43 +208,32 @@ h1{
     width: 80%;
 }
 
-.game-triangle{
-    width: 0;
-    height: 100%;
-    border-top: 75px solid transparent;
-    border-bottom: 75px solid transparent;
-    border-left: 13px solid #eee;
-    float: left;
+.game-container::after{
+    content: url(../assets/after-arrow.png);
     position: absolute;
-    right: -13px;
-    border-left: 13px solid #2B1234;
-    position: absolute;
-
+    right: 27px;
+    top: 0;
+    width: 36px;
+    height: 120px;
 }
 
 .second{
     background-color: #DDD1D1;
 }
 
-#second{
-    border-left: 13px solid #DDD1D1;
-}
+
 
 .third{
     background-color: black;
 }
 
-#third{
-    border-left: 13px solid black;
-}
+
 
 .fourth{
     background-color: black;
 }
 
-#fourth{
-    border-left: 13px solid black;
-}
+
 
 .game-container-2{
     width: 100%;
@@ -192,7 +246,7 @@ h1{
 .game-info{
     width: 100%;
     display: flex;
-    height: 120px;
+    height: 100%;
     justify-content: center;
     align-items: center;
 }
@@ -201,12 +255,11 @@ h1{
     color: forestgreen;
 }
 .game-disclaimer{
-    height: 30px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    text-align: center;
     font-size: 12px;
     color: #999999;
 }
@@ -221,8 +274,18 @@ h1{
 
 .rating{
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
+}
+
+.rating-stars{
+    width: 50%;
+}
+
+.rating-score{
+    width: 50%;
+}
+.rating-stars p{
+    margin-bottom: 0;
 }
 
 .rating img{
@@ -231,22 +294,22 @@ h1{
 
 .play a{
     font-weight: bold;
-    color: white;
+    color: black;
     text-decoration: none;
-    padding: 10px 20px;
-    border: #FCD139 solid 2px;
+    padding: 10px 40px;
+    background-color: #FCD139;
     border-radius: 5px;
     transition: ease-in-out .3s;
     cursor: pointer;
 }
 
 .play a:hover{
-    background-color: #FCD139;
-    color: black;
-    transform: scale(1.5);
+    background-color: red;
+    color: white;
+    transform: scale(1.1);
 }
 
-@media screen and (max-width:600px){
+@media screen and (max-width:850px){
     
     .bet-table{
         display: none;
@@ -255,7 +318,7 @@ h1{
 
 /*BET TABLE FOR MOBILE*/    
 .bet-table-mobile{
-    padding: 0 20px;
+    padding: 0 10px;
     display: flex;
     flex-direction: column;
     margin-top: 10px;
@@ -276,10 +339,23 @@ h1{
 }
 
 .game-image-mobile{
-    width: 100%;
-    padding-top: 5px;
+    width: 80%;
+    margin-top: 35px;
+    padding-top: 10px;
     display: flex;
+}
+
+
+.game-image-mobile:last-child{
     justify-content: center;
+}
+
+.game-container-mobile::after{
+    content: url(../assets/after-arrow-mobile.png);
+    position: absolute;
+    right: 34px;
+    top: 0;
+    width: 36px;
 }
 
 .game-mobile-rating{
@@ -303,6 +379,7 @@ h1{
 
 .game-container-mobile-2{
     width: 50%;
+    padding: 5px;
 }
 
 .mobile-game-triangle{
@@ -317,17 +394,13 @@ width: 0;
     border-left: 13px solid #161515;
     position: absolute;
 }
-@media screen and (max-width:600px){
+@media screen and (max-width:850px){
     
     .game-info{
         flex-direction: column;
         height: 150px;
         position: relative;
         justify-content: flex-start;
-    }
-
-    .game-disclaimer{
-        display: none;
     }
 
     .bonus{
@@ -345,8 +418,15 @@ width: 0;
         padding: 10px 30px;
     }
 
+    .game-card:hover{
+        transform: scale(1);
+    }
+
+    .game-card{
+        min-height: 200px;
+    }
 }
-@media screen and (min-width:600px){
+@media screen and (min-width:850px){
     
     .bet-table-mobile{
         display: none;
@@ -396,7 +476,7 @@ width: 0;
     width: 100%;
 }
 .footer-logos img{
-    width: 30%;
+    width: 20%;
     margin-top: 10px;
 }
 .footer-menu{
@@ -435,6 +515,13 @@ width: 0;
     cursor: pointer;
     transition: ease 0.3s;
 }
+
+@media screen and (max-width:600px) {
+    .footer-logos img{
+        width: 30%;
+    }
+}
+
 /*Pop up*/
 
 .pop-up{
@@ -464,6 +551,7 @@ width: 0;
 
 .pop-up__container{
     width: 400px;
+    max-height: 600px;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -473,6 +561,7 @@ width: 0;
     padding: 20px;
     border-radius: 30px;
     margin: 40px;
+    overflow-y: auto;
 }
 .pop-up__container h1{
     text-align: center;
